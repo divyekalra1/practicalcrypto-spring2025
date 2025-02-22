@@ -53,7 +53,6 @@ def score_recovered_plaintext(recovered, plaintext):
 def run_caesar_cipher_test(key, plaintext):
     key = bytes([key[0]])
     ciphertext = vigenere_cipher(key, plaintext)
-
     recovered = solution_2.break_caesar_cipher(ciphertext)
 
     return score_recovered_plaintext(recovered, plaintext)
