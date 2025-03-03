@@ -73,7 +73,7 @@ class PaddingOracleProblem:
         # against messages of different lengths.
         msg_len = 10
         msg = get_random_bytes(msg_len)
-
+        # print(f"original message : {msg}")
         # Pad and encrypt the message.
         pad_msg = Padding.pad(msg, AES_BLOCK_SIZE, "pkcs7")
         ctx = iv + aes.encrypt(pad_msg)
